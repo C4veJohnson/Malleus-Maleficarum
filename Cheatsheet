@@ -153,7 +153,7 @@ find / -name id_rsa 2> /dev/null
 https://github.com/carlospolop/PEASS-ng
 https://github.com/rebootuser/LinEnum
 https://github.com/diego-treitos/linux-smart-enumeration
-
+https://github.com/mzet-/linux-exploit-suggester
 
 
 
