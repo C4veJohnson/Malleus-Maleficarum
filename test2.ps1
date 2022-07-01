@@ -1,0 +1,27 @@
+# Script to automatically install Windows updates
+
+Set-ExecutionPolicy Bypass -Scope Process -Force
+
+Import-Module PSWindowsUpdate\2.2.0.3\PSWindowsUpdate.dll
+
+# Checks if folder AutoUpdates already exists on the server. If it doesn't it creates it
+$ChkPath = "C:\AutoUpdates"
+$PathExists = Test-Path $ChkPath
+If ($PathExists -eq $false)
+{
+    mkdir C:\AutoUpdates
+    mkdir C:\AutoUpdates\History
+}
+else
+{
+    # Do nothing
+}
+
+
+# Installs windows updates
+# Gets latest Windows updates
+Get-WindowsUpdate | Out-File C:\AutoUpdates\History\"$((Get-Date).ToString('dd-MM-yyyy_HH.mm.ss'))_updates".txt
+
+#Installs updates, accepts all automatically and reboots.
+Get-WindowsUpdate -Install -AcceptAll -AutoReboot
+
