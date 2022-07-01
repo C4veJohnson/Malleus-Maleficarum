@@ -1,0 +1,4 @@
+copy PS to 
+%WINDIR%\System32\WindowsPowerShell\v1.0\Modules
+
+Set-ExecutionPolicy –ExecutionPolicy RemoteSigned -force
