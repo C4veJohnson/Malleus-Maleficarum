@@ -1,1 +1,1 @@
-$kbs = Select-String -AllMatches 'KB                              :' .\<filename>.txt ; $kbs.line.split("KB                              : ", [System.StringSplitOptions]::RemoveEmptyEntries) | Out-File C:\AutoUpdates\KBs\"$((Get-Date).ToString('dd-MM-yyyy_HH.mm.ss'))_KBs".txt
+$kbs = Select-String -AllMatches 'KB                              :' .\<filename>.txt ; $kbs.line.split("KB                              : ", [System.StringSplitOptions]::RemoveEmptyEntries) | Out-File C:\MalleusMaleficarum\KBs\"$((Get-Date).ToString('dd-MM-yyyy_HH.mm.ss'))_KBs".txt
