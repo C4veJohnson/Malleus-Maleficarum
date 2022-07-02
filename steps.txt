@@ -1,4 +1,7 @@
 copy PS to 
 %WINDIR%\System32\WindowsPowerShell\v1.0\Modules
 
-Set-ExecutionPolicy –ExecutionPolicy RemoteSigned -force
+
+task schu
+powershell.exe
+-NoProfile -NoLogo -NonInteractive -ExecutionPolicy Bypass -File C:\Users\Administrator\Desktop\test2.ps1
