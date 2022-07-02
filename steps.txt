@@ -1,7 +1,8 @@
-copy PS to 
+copy PSWindowsUpdate to 
 %WINDIR%\System32\WindowsPowerShell\v1.0\Modules
 
 
 task schu
 powershell.exe
--NoProfile -NoLogo -NonInteractive -ExecutionPolicy Bypass -File C:\Users\Administrator\Desktop\test2.ps1
+-NoProfile -NoLogo -NonInteractive -ExecutionPolicy Bypass -File C:\Scripts\MalleusMaleficarum.ps1
+
